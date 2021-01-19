@@ -26,6 +26,7 @@ bisogna daje retta: mò, presempio,
 l'urtimo piatto me lo magno in piedi!";
   // $array_poesia = explode(".", $poesia);
   $array_poesia = preg_split('/ (.|!) /', $poesia);
+  $parola_sotitutiva = $_GET["parola"]
 ?>
 
 <!DOCTYPE html>
@@ -38,19 +39,22 @@ l'urtimo piatto me lo magno in piedi!";
   <body>
     <div id="container">
       <div id="poem">
-        <h1><?php echo $titolo; ?></h1>
-        <p><?php echo nl2br($poesia); ?></p>
-        <p>by: <?php echo $autore; ?></p>
+        <div class="layover">
+          <h1><?php echo $titolo; ?></h1>
+          <p><?php echo nl2br($poesia); ?></p>
+          <p>by: <?php echo $autore; ?></p>
+        </div>
       </div>
       <div id="new_poem">
         <h1><?php echo $titolo; ?></h1>
-        <p><?php echo str_replace("Commenda", "Marco", $poesia); ?></p>
+        <h2>Parola da sostituire: <?php echo $parola_sotitutiva; ?></h2>
+        <p><?php echo str_replace($parola_sotitutiva, "***", $poesia); ?></p>
         <p>by: <?php echo $autore; ?></p>
       </div>
       <div id="array_poem">
         <h1>Test su array</h1>
         <p><?php var_dump($array_poesia); ?></p>
-        <p>lunghezza stringa: <?php echo strlen($poesia); ?></p>
+        <p>Lunghezza stringa: <?php echo strlen($poesia); ?></p>
       </div>
     </div>
   </body>

@@ -2,4 +2,19 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+}
+#poem {
+  width: 49%;
+  border: 1px solid black;
+  text-align: center;
+}
+#new_poem {
+  width: 49%;
+  border: 1px solid black;
+  text-align: center;
+}
+#array_poem {
+  width: 100%;
+  border: 1px solid black;
 }
